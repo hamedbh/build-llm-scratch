@@ -11,13 +11,17 @@ readme = "README.md"
 requires-python = ">= 3.10"
 dependencies = [
     "click",
-    "python-dotenv"
+    "ipykernel",
+    "nbstripout",
+    "numpy",
+    "python-dotenv",
+    "pickleshare",
+    "tiktoken",
+    "torch",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "ipykernel",
-    "nbstripout",
     "pre-commit",
     "pytest",
     "ruff",

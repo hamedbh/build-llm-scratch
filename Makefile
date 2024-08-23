@@ -21,6 +21,11 @@ PROJECT_NAME = build-llm-scratch
 # The comment after the double `##` becomes the description of the target when
 # running `make` or `make help` at the command line.
 
+## Chapter 2 files
+chapter_02: data/external/the_verdict_edith_wharton.txt
+
+data/external/the_verdict_edith_wharton.txt: src/data/download_the_verdict.py
+	python3 -m src.data.download_the_verdict -o $@
 ## Make datasets
 data: data/raw/dataset.csv
 
